@@ -1,0 +1,3 @@
+HiHello from AskPythonexitHi
+Hello from AskPython
+exit
