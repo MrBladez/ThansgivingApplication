@@ -11,6 +11,9 @@ file = open("Journal.txt")
 while True:
     # This gets input from the user on what he would like to do
     userChoice = input("Would you like to enter or view a journal entry or exit? ")
+    while userChoice != "enter" and userChoice != "view" and userChoice != "exit" and userChoice != "Enter" and userChoice != "View" and userChoice != "Exit":
+        print("Wrong entry, please enter something again in the following prompt")
+        userChoice = input("Do you want to enter,view or exit? ")
     if userChoice == "enter" or userChoice == "Enter":
         if input("Would you like to go back from enter? (yes/no) ") == "yes":
             continue
