@@ -8,18 +8,21 @@ while True:
     userChoice = input("Would you like to enter or view a journal entry or exit? ")
     if userChoice == "enter" or userChoice == "Enter":
         userEntry = input("What would you like to enter? ")
-        print("Entry", file=open('Journal.txt', 'a'))
         print(userEntry, file=open('Journal.txt', 'a'))
+        print("EndOfEntry", file=open('Journal.txt', 'a'))
     elif userChoice == "view" or userChoice == "View":
         for line in file:
             wordList = line.split()
             for item in wordList:
-                if item == "Entry":
+                if item == "EndOfEntry":
                     EntryNumber += 1
+                    if entry != "":
+                        entryList.append(entry)
+                    entry = ""
                 else:
                     entry += item + " "
-        whichToView = int(input("What entry would you like to see? " + str(EntryNumber) + " possible entries"))
-        print(entryList[whichToView])
+        whichToView = int(input("What entry would you like to see? (" + str(EntryNumber) + " possible entries) "))
+        print("This is entry number " + str(whichToView) + " : " + entryList[whichToView-1])
     elif userChoice == "Exit" or userChoice == "exit":
         break
 

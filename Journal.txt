@@ -1,4 +1,4 @@
-Entry
-I am thankful for my friends
-Entry
-I am thankful for my family
+I am thankful for my friends and my family
+EndOfEntry
+I am thankful for theater and the technichal aspects
+EndOfEntry
